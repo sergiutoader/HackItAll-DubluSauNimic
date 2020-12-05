@@ -1,15 +1,14 @@
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-var firebaseConfig = {
-  apiKey: "AIzaSyA65yQ2iHBDo0Lk4xAZUE00B-T7RB9MH2M",
-  authDomain: "hack-2db71.firebaseapp.com",
-  databaseURL: "https://hack-2db71-default-rtdb.firebaseio.com",
-  projectId: "hack-2db71",
-  storageBucket: "hack-2db71.appspot.com",
-  messagingSenderId: "129351751967",
-  appId: "1:129351751967:web:172dcac07d136407ba382a",
-  measurementId: "G-MTN8ZWD4T7"
+ var firebaseConfig = {
+    apiKey: "AIzaSyDh4XXtbXqd_UpjAMs20fUpyZ5TYUJRfW8",
+    authDomain: "hackitall-66cb0.firebaseapp.com",
+    databaseURL: "https://hackitall-66cb0-default-rtdb.firebaseio.com",
+    projectId: "hackitall-66cb0",
+    storageBucket: "hackitall-66cb0.appspot.com",
+    messagingSenderId: "535986942185",
+    appId: "1:535986942185:web:22ea42cf5d84dbac2f0078"
 };
 
 // Initialize Firebase
@@ -25,7 +24,6 @@ function loginPressed() {
 
   console.log(username);
   console.log(password);
-
 }
 
 

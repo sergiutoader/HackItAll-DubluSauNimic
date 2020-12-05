@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Profile
+	</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="./styles/style.css">
+	<link rel="stylesheet" href="./styles/calendar.css">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <span>
+    	<button class="btn btn-outline-success my-2 my-lg-0" type="submit">Search</button>
+  	</span>
+
+  </div>
+</nav>
+
+
+	<div class="container-fluid m-3">
+	  <div class="row">
+	    
+	    <nav class="col-sm-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky i-mb-2">
+      			
+						<img src="assets/mikutz.png" class="img-thumbnail rounded mx-auto d-block">
+						<h3 class="text-center"> Lil Mikutz </h3>
+
+						<button type="button" class="btn btn-danger">Modify profile Data</button>
+						<button type="button" class="btn btn-success">Create Meeting</button>
+						<button type="button" class="btn btn-info">Appointments Archive</button>
+
+          </div>
+      </nav>
+
+	    <div class="col-sm-7">
+	      
+					<h1 class="text-primary text-center">
+						My appointments
+					</h1>
+
+
+	      <div class="calendar">
+					<div class="month">
+					  <ul>
+					    <li>
+					      December<br>
+					      <span style="font-size:18px">2020</span>
+					    </li>
+					  </ul>
+					</div>
+
+					<ul class="weekdays">
+					  <li>Mo</li>
+					  <li>Tu</li>
+					  <li>We</li>
+					  <li>Th</li>
+					  <li>Fr</li>
+					  <li>Sa</li>
+					  <li>Su</li>
+					</ul>
+
+				  <ul class="days">
+				    <li class="padd"></li>
+				    <li class="padd"></li>
+				    <li class="free">1</li>
+				    <li class="free">2</li>
+				    <li class="free">3</li>
+				    <li class="free">4</li>
+				    <li class="free">5</li>
+				    <li class="free">6</li>
+				    <li class="free">7</li>
+				    <li class="free">8</li>
+				    <li class="free">9</li>
+				    <li class="meeting">10</li>
+				    <li class="free">11</li>
+				    <li class="urgent">12</li>
+				    <li class="free">13</li>
+				    <li class="free">14</li>
+				    <li class="meeting">15</li>
+				    <li class="free">16</li>
+				    <li class="free">17</li>
+				    <li class="free">18</li>
+				    <li class="free">19</li>
+				    <li class="free">20</li>
+				    <li class="free">21</li>
+				    <li class="free">22</li>
+				    <li class="free">23</li>
+				    <li class="free">24</li>
+				    <li class="free">25</li>
+				    <li class="free">26</li>
+				    <li class="free">27</li>
+				    <li class="free">28</li>
+				    <li class="free">29</li>
+				    <li class="free">30</li>
+				    <li class="free">31</li>
+				  </ul>
+				
+				</div>
+
+	    </div>
+
+	</div>
+
+</body>
+</html>
