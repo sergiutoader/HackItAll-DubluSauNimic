@@ -4,7 +4,7 @@
   "description": "TODO:",
   "main": "index.js",
   "scripts": {
-    "render": "pug -P index.pug",
+    "render": "pug -P index.pug && pug -P profile.pug",
     "clear": "del /f *.html"
   },
   "repository": {

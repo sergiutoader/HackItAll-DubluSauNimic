@@ -1,68 +1,64 @@
-doctype html
-head
-  title
-    | Profile
-  meta(name='viewport' content='width=device-width, initial-scale=1')
-  include includes/links.pug
+extends templates/normal_page.pug
 
-.container-fluid.m-3
-  .row
-    nav.col-sm-2.d-none.d-md-block.bg-light.sidebar
-      .sidebar-sticky.i-mb-2
-        img.img-thumbnail.rounded.mx-auto.d-block(src='assets/mikutz.png')
-        h3.text-center  Lil Mikutz 
-        button.btn.btn-danger(type='button') Modify profile Data
-        button.btn.btn-success(type='button') Create Meeting
-        button.btn.btn-info(type='button') Appointments Archive
-    .col-sm-7
-      h1.text-primary.text-center
-        | My appointments
-      .calendar
-        .month
-          ul
-            li
-              | December
-              br
-              span(style='font-size:18px') 2020
-        ul.weekdays
-          li Mo
-          li Tu
-          li We
-          li Th
-          li Fr
-          li Sa
-          li Su
-        ul.days
-          li.padd
-          li.padd
-          li.free 1
-          li.free 2
-          li.free 3
-          li.free 4
-          li.free 5
-          li.free 6
-          li.free 7
-          li.free 8
-          li.free 9
-          li.meeting 10
-          li.free 11
-          li.urgent 12
-          li.free 13
-          li.free 14
-          li.meeting 15
-          li.free 16
-          li.free 17
-          li.free 18
-          li.free 19
-          li.free 20
-          li.free 21
-          li.free 22
-          li.free 23
-          li.free 24
-          li.free 25
-          li.free 26
-          li.free 27
-          li.free 28
-          li.free 29
-          li.free 30
-          li.free 31
+block page
+  .container-fluid.m-3
+    .row
+      nav.col-sm-2.d-none.d-md-block.bg-light.sidebar
+        .sidebar-sticky.i-mb-2
+          img.img-thumbnail.rounded.mx-auto.d-block(src='assets/mikutz.png')
+          h3.text-center  Lil Mikutz 
+          button.btn.btn-danger(type='button') Modify profile Data
+          button.btn.btn-success(type='button') Create Meeting
+          button.btn.btn-info(type='button') Appointments Archive
+      .col-sm-7
+        h1.text-primary.text-center
+          | My appointments
+        .calendar
+          .month
+            ul
+              li
+                | December
+                br
+                span(style='font-size:18px') 2020
+          ul.weekdays
+            li Mo
+            li Tu
+            li We
+            li Th
+            li Fr
+            li Sa
+            li Su
+          ul.days
+            li.padd
+            li.padd
+            li.free 1
+            li.free 2
+            li.free 3
+            li.free 4
+            li.free 5
+            li.free 6
+            li.free 7
+            li.free 8
+            li.free 9
+            li.meeting 10
+            li.free 11
+            li.urgent 12
+            li.free 13
+            li.free 14
+            li.meeting 15
+            li.free 16
+            li.free 17
+            li.free 18
+            li.free 19
+            li.free 20
+            li.free 21
+            li.free 22
+            li.free 23
+            li.free 24
+            li.free 25
+            li.free 26
+            li.free 27
+            li.free 28
+            li.free 29
+            li.free 30
+            li.free 31

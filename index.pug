@@ -1,10 +1,6 @@
-doctype html
-head
-  meta(charset='UTF-8')
-  meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  title Login
-  include includes/links.pug
-body
+extends templates/normal_page.pug
+
+block page
   main#main-holder
     h1#login-header Login
     #login-error-msg-holder
@@ -16,5 +12,3 @@ body
       input#password-field.login-form-field(type='password' name='password' placeholder='Password')
       input(onclick='loginPressed()')
       | Login
-  script(src='https://www.gstatic.com/firebasejs/8.1.2/firebase.js')
-  script(src='scripts/script.js')
