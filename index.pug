@@ -1,4 +1,4 @@
-extends templates/normal_page.pug
+extends templates/outsider_page.pug
 
 block page
   main#main-holder
@@ -10,5 +10,5 @@ block page
     form#login-form
       input#username-field.login-form-field(type='text' name='username' placeholder='Username')
       input#password-field.login-form-field(type='password' name='password' placeholder='Password')
-      input(onclick='loginPressed()')
-      | Login
+      button(onclick='loginPressed()')
+        | Login

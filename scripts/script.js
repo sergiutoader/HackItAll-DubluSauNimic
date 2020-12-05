@@ -22,6 +22,9 @@ function loginPressed() {
   let username = document.getElementById("username-field").value;
   let password = document.getElementById("password-field").value;
 
+  console.log(username);
+  console.log(password);
+
   writeUserData(username, password);
 
   console.log(username);

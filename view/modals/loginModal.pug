@@ -1,0 +1,18 @@
+#loginModal.modal.fade(role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+	#login-error-msg-holder
+		p#login-error-msg
+			| Invalid username
+			span#error-msg-second-line and/or password
+	.modal-dialog.modal-dialog-centered(role='document')
+		.modal-content
+			.modal-header.border-bottom-0
+				button.close(type='button' data-dismiss='modal' aria-label='Close')
+					span(aria-hidden='true') &times;
+			.modal-body
+				form#login-form
+					input#username-field.login-form-field(type='text' name='username' placeholder='Username')
+					input#password-field.login-form-field(type='password' name='password' placeholder='Password')
+					button(onclick='loginPressed()')
+						| Login
+			.modal-footer
+				button.btn.btn-secondary(type='button' data-dismiss='modal') Close
