@@ -15,6 +15,8 @@
 firebase.initializeApp(firebaseConfig);
 var database = firebase.database();
 
+var usersRef = rootRef.child("users")
+
 // la apasarea
 function loginPressed() {
   let username = document.getElementById("username-field").value;

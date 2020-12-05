@@ -1,0 +1,20 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Login
+  include includes/links.pug
+body
+  main#main-holder
+    h1#login-header Login
+    #login-error-msg-holder
+      p#login-error-msg
+        | Invalid username 
+        span#error-msg-second-line and/or password
+    form#login-form
+      input#username-field.login-form-field(type='text' name='username' placeholder='Username')
+      input#password-field.login-form-field(type='password' name='password' placeholder='Password')
+      input(onclick='loginPressed()')
+      | Login
+  script(src='https://www.gstatic.com/firebasejs/8.1.2/firebase.js')
+  script(src='scripts/script.js')
