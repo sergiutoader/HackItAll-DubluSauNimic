@@ -1,0 +1,12 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  #navbarSupportedContent.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto
+      li.nav-item.active
+        a.nav-link(href='index.html')
+          | Home 
+          span.sr-only (current)
+      li.nav-item
+        a.nav-link(href='profile.html') My Profile
+    span
+      button.btn.btn-outline-success.my-2.my-lg-0(type='button' data-toggle='modal' data-target='#loginModal') Log In
+include modals/loginModal.pug

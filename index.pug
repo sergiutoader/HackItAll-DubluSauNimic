@@ -1,0 +1,14 @@
+extends templates/outsider_page.pug
+
+block page
+  main#main-holder
+    h1#login-header Login
+    #login-error-msg-holder
+      p#login-error-msg
+        | Invalid username 
+        span#error-msg-second-line and/or password
+    form#login-form
+      input#username-field.login-form-field(type='text' name='username' placeholder='Username')
+      input#password-field.login-form-field(type='password' name='password' placeholder='Password')
+      button(onclick='loginPressed()')
+        | Login

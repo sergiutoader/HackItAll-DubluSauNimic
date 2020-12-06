@@ -4,7 +4,8 @@
   "description": "TODO:",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "render": "pug -P index.pug && pug -P profile.pug",
+    "clear": "del /f *.html"
   },
   "repository": {
     "type": "git",
@@ -18,8 +19,12 @@
   "homepage": "https://github.com/sergiutoader/HackItAll-DubluSauNimic#readme",
   "dependencies": {
     "bootstrap": "^4.5.3",
+    "express": "^4.17.1",
     "firebase": "^8.1.2",
+    "fs": "0.0.1-security",
     "mongodb": "^3.6.3",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "path": "^0.12.7",
+    "pug": "^3.0.0"
   }
 }

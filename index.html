@@ -1,35 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="stylesheet" href="styles/style.css">
-
-
+  <title>Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/calendar.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
-
 <body>
-  <main id="main-holder">
-    <h1 id="login-header">Login</h1>
-
-    <div id="login-error-msg-holder">
-      <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"><a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a></li>
+        <li class="nav-item"><a class="nav-link" id="my-profile-button" onClick="checkLoggedIn()">My Profile</a></li>
+      </ul><span>
+        <button class="btn btn-outline-success my-2 my-lg-0" type="button" data-toggle="modal" data-target="#loginModal">Log In</button></span>
+        <span><button class="btn btn-outline-success my-2 my-lg-0 reg-button" type="button" data-toggle="modal" data-target="#registerModal">Register</button></span>
     </div>
+  </nav>
 
-    <form id="login-form">
-      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
-      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
-      <input onclick="loginPressed()">Login</input>
-    </form>
+  <div class="hidden red" id="login-error-div">You must log in to access your profile</div>
 
-  </main>
+  <div class="modal fade" id="loginModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div id="login-error-msg-holder">
+      <p id="login-error-msg">Invalid username<span id="error-msg-second-line">and/or password</span></p>
+    </div>
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header border-bottom-0">
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <form id="login-form">
+            <input class="login-form-field" id="username-field" type="text" name="username" placeholder="Username">
+            <input class="login-form-field" id="password-field" type="password" name="password" placeholder="Password">
+            <button onclick="loginPressed()">Login</button>
+          </form>
+          <form id="successful-login" class="hidden green">Login successful</form>
+          <form id="unsuccessful-login" class="hidden red">Login failed (wrong username or password)</form>
+
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal" onclick="loginClosePressed()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="registerModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header border-bottom-0">
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <form id="successful-register" class="hidden green">Registration successful</form>
+          <form id="unsuccessful-register" class="hidden red">Registration failed (Username already exists)</form>
+          <form id="register-form">
+
+            <input class="login-form-field" id="register-username-field" type="text" name="username" placeholder="Username">
+            <input class="login-form-field" id="register-password-field" type="password" name="password" placeholder="Password">
+
+            <button onclick="registerPressed()">Register</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal" onclick="registerClosePressed()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="about-section">
+  <h1>About Us Page</h1>
+  <p><h3>Enthusiastic team that want to solve irregular problems for regular people.</h3></p>
+  <p><h4>It is always a pleasure to make our customers happy even if it is not their best day.</h4></p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="pictures/Victor.jpg" alt="Victor" style="width:100%">
+      <div class="container">
+        <h2>Victor Tudose</h2>
+        <p class="title">Designer</p>
+        <p>"Our dreams may come true if I don't sleep over the week for them."</p>
+        <p class="title"> Contact </p>
+        <p>tudose.victor99@yahoo.com</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="card">
+       <img src="pictures/Andrei.jpg" alt="Andrei" style="width:100%">
+      <div class="container">
+        <h2>Andrei Micut</h2>
+        <p class="title">CEO & Founder</p>
+        <p>"At work, my team is the answer to all of my problems and questions."</p>
+         <p class="title"> Contact </p>
+        <p>andrei.ion.micut@gmail.com</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="card">
+      <img src="pictures/Sergiu.jpg" alt="Sergiu" style="width:100%">
+      <div class="container">
+        <h2>Sergiu Toader</h2>
+        <p class="title">Data base administrator</p>
+        <p>"It isn't just a job. It's so much more than that."  </p>
+         <p class="title"> Contact </p>
+        <p>sergiu.toader99@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase.js"></script>
   <script src="scripts/script.js"></script>
-
-
 </body>
-
-</html>
